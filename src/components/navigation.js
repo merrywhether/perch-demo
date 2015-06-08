@@ -1,4 +1,5 @@
-let Backbone = require('backbone');
+let $ = require('jquery'),
+    Backbone = require('backbone');
 
 let events = require('./events'),
     userManager = require('./user');
@@ -90,10 +91,12 @@ class Navigation extends Backbone.View {
   login() {
     this.setToUser();
     this.render();
+    $('.button-collapse').sideNav();
   }
   logout() {
     this.setToPublic();
     this.render();
+    $('.button-collapse').sideNav();
   }
   events() {
     return {

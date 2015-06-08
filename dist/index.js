@@ -13419,7 +13419,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
 
-var Backbone = require('backbone');
+var $ = require('jquery'),
+    Backbone = require('backbone');
 
 var events = require('./events'),
     userManager = require('./user');
@@ -13580,12 +13581,14 @@ var Navigation = (function (_Backbone$View2) {
     value: function login() {
       this.setToUser();
       this.render();
+      $('.button-collapse').sideNav();
     }
   }, {
     key: 'logout',
     value: function logout() {
       this.setToPublic();
       this.render();
+      $('.button-collapse').sideNav();
     }
   }, {
     key: 'events',
@@ -13636,7 +13639,7 @@ var Navigation = (function (_Backbone$View2) {
 
 module.exports = Navigation;
 
-},{"./../templates/navigation/nav.hbs":41,"./../templates/navigation/navItemMobile.hbs":42,"./../templates/navigation/navItemTop.hbs":43,"./events":13,"./user":16,"backbone":1}],15:[function(require,module,exports){
+},{"./../templates/navigation/nav.hbs":41,"./../templates/navigation/navItemMobile.hbs":42,"./../templates/navigation/navItemTop.hbs":43,"./events":13,"./user":16,"backbone":1,"jquery":11}],15:[function(require,module,exports){
 'use strict';
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -15737,6 +15740,7 @@ var App = (function (_Backbone$Router) {
       Backbone.history.start({
         pushState: false,
         root: '/~keravuor/cs290/perch/'
+        // root: '/dist/'
       });
     }
   }]);

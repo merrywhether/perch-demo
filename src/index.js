@@ -97,6 +97,7 @@ class App extends Backbone.Router {
     Backbone.history.start({
       pushState: false,
       root: '/~keravuor/cs290/perch/'
+      // root: '/dist/'
     });
   }
 }
