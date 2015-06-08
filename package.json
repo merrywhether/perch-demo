@@ -13,7 +13,6 @@
     "babelify": "^6.1.2",
     "backbone": "^1.2.0",
     "browserify": "^10.2.3",
-    "express": "^4.12.4",
     "handlebars": "^3.0.3",
     "hbsfy": "^2.2.1",
     "jquery": "^2.1.4",

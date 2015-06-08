@@ -60,7 +60,7 @@ class CreatePerchView extends Backbone.View {
         if (response.id) {
           Backbone.history.navigate(`perchAdmin/${response.id}`, {trigger: true});
         } else {
-          Materialize.toast('Creation failed. Please try again.', 4000, 'error-toast');
+          Materialize.toast('Creation failed. Address already claimed.', 4000, 'error-toast');
         }
       });
     }
