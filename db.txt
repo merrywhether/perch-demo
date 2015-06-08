@@ -1,0 +1,38 @@
+CREATE TABLE users (
+    id INT NOT NULL AUTO_INCREMENT,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    token VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE perches (
+    id INT NOT NULL AUTO_INCREMENT,
+    perchName VARCHAR(255) NOT NULL,
+    address VARCHAR(255) UNIQUE NOT NULL,
+    ownerId INT NOT NULL,
+    PRIMARY KEY (id),
+    CONSTRAINT fk_PerchOwner FOREIGN KEY (ownerId) REFERENCES users(id)
+);
+
+CREATE TABLE available (
+    id INT NOT NULL AUTO_INCREMENT,
+    perchId INT NOT NULL,
+    availDate DATE NOT NULL,
+    PRIMARY KEY (id),
+    CONSTRAINT fk_PerchAvail FOREIGN KEY (perchId) REFERENCES perches(id) ON DELETE CASCADE,
+    UNIQUE KEY uniqueIndex (perchId, availDate)
+);
+
+CREATE TABLE bookings (
+    id INT NOT NULL AUTO_INCREMENT,
+    perchId INT NOT NULL,
+    userId INT NOT NULL,
+    bookDate DATE NOT NULL,
+    PRIMARY KEY (id),
+    CONSTRAINT fk_PerchBook FOREIGN KEY (perchId) REFERENCES perches(id) ON DELETE CASCADE,
+    CONSTRAINT fk_UserBook FOREIGN KEY (userId) REFERENCES users(id) ON DELETE CASCADE,
+    UNIQUE KEY uniquePerchIndex (perchId, bookDate),
+    UNIQUE KEY uniqueUserIndex (userId, bookDate)
+);

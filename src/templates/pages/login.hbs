@@ -1,0 +1,70 @@
+<div class="row jumbotron login-page valign-wrapper">
+  <div class="col l6 offset-l3 m8 offset-m2 s10 offset-s1 valign">
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs z-depth-3">
+          <li class="tab col s6"><a href="#login-form" class="grey darken-2 yellow-text text-accent-3">Log In</a></li>
+          <li class="tab col s6"><a href="#signup-form" class="grey darken-2 yellow-text text-accent-3">Sign Up</a></li>
+        </ul>
+      </div>
+      <div id="login-form" class="col s12">
+        <div class="row">
+          <form class="col s12 white z-depth-3 center-form">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="login-username" type="text">
+                <label for="login-username">Username (or email)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="login-password" type="password">
+                <label for="login-password">Password</label>
+              </div>
+            </div>
+            <div class="row center-align">
+              <button id="login-submit" class="btn-large waves-effect yellow accent-3 grey-text text-darken-2" type="submit" name="login">Log In</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="signup-form" class="col s12">
+        <div class="row">
+          <form class="col s12 white z-depth-3 center-form">
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="mdi-action-info prefix tooltipped hide-on-med-and-down" data-position="bottom" data-delay="50" data-tooltip="Usernames must be at least 4 characters long using letters, numbers, or . _ -"></i>
+                <i class="mdi-action-info prefix tooltipped hide-on-large-only" data-position="right" data-delay="50" data-tooltip="At least 4 characters using letters, numbers, or . _ -"></i>
+                <input id="signup-username" type="text">
+                <label for="signup-username">Username</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="mdi-action-info prefix tooltipped hide-on-med-and-down" data-position="bottom" data-delay="50" data-tooltip="Email addresses must conform to W3C spec"></i>
+                <i class="mdi-action-info prefix tooltipped hide-on-large-only" data-position="right" data-delay="50" data-tooltip="Must conform to W3C spec"></i>
+                <input id="signup-email" type="email">
+                <label for="signup-email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 m12 l6">
+                <i class="mdi-action-info prefix tooltipped hide-on-med-and-down" data-position="bottom" data-delay="50" data-tooltip="Passwords must be at least 8 characters long using letters, numbers, or ! @ # $ % ^ & * ( )"></i>
+                <i class="mdi-action-info prefix tooltipped hide-on-large-only" data-position="right" data-delay="50" data-tooltip="At least 8 characters using letters, numbers, or ! @ # $ % ^ & * ( )"></i>
+                <input id="signup-password1" type="password">
+                <label for="signup-password1">Password</label>
+              </div>
+              <div class="input-field col s12 m12 l6">
+                <input id="signup-password2" type="password">
+                <label for="signup-password2">Re-Enter Password</label>
+              </div>
+            </div>
+            <div class="row center-align">
+              <button id="signup-submit" class="btn-large waves-effect yellow accent-3 grey-text text-darken-2" type="submit" name="signup">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+{
+  "name": "perch_demo",
+  "version": "1.0.0",
+  "description": "First demo build of perch",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify src/index.js -t babelify -t hbsfy -o dist/index.js",
+    "watch": "watchify src/index.js -t babelify -t hbsfy -o dist/index.js -v -d"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babelify": "^6.1.2",
+    "backbone": "^1.2.0",
+    "browserify": "^10.2.3",
+    "express": "^4.12.4",
+    "handlebars": "^3.0.3",
+    "hbsfy": "^2.2.1",
+    "jquery": "^2.1.4",
+    "underscore": "^1.8.3",
+    "watchify": "^3.2.1"
+  }
+}

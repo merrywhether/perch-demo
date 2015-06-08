@@ -1,0 +1,87 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav li a {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+nav li a {
+    font-weight: 400;
+}
+
+.jumbotron {
+  background-size: cover;
+  background-position: center center;
+  min-height: 95vh;
+}
+
+.welcome-page {
+  background-image: url(img/welcome_bg.jpg);
+}
+
+.login-page {
+  background-image: url(img/login_bg.jpg);
+}
+
+.create-perch-page {
+  background-image: url(img/createPerch_bg.jpg);
+}
+
+.perch-admin-page {
+  background-image: url(img/perchAdmin_bg.jpg);
+}
+
+.browse-page {
+  background-image: url(img/browse_bg.jpg);
+}
+
+.home-page {
+  background-image: url(img/home_bg.jpg);
+}
+
+.tabs > div.indicator {
+  background-color: #ffea00;
+}
+
+.jumbotron .center-form{
+  padding-top: 20px;
+}
+
+.login-page tabs,
+.center-form {
+  border-radius: 2px;
+}
+
+.center-form-banner,
+.center-banner {
+  border-bottom: 5px solid #ffea00;
+}
+
+.error-toast {
+  background-color: rgb(244, 67, 54);
+  border: 2px solid white;
+}
+
+.picker__date-display,
+.picker__year-display {
+  background-color: #ffea00;
+  color: #616161;
+}
+
+.picker__weekday-display {
+  background-color: #616161;
+  color: #ffea00;
+}
+
+.admin-avail-btn {
+  margin-left: 70px;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0;
+}
