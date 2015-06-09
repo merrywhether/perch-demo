@@ -1,3 +1,5 @@
+require("babel/polyfill");
+
 let $ = require('jquery'),
     _ = require('underscore'),
     Backbone = require('backbone'),
